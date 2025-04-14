@@ -7,9 +7,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "canvas": "^2.11.2",
-    "node-fetch": "^2.6.7",
+    "form-data": "^4.0.0",
     "next": "^14.0.0",
-    "form-data": "^4.0.0"
+    "node-fetch": "^2.6.7",
+    "sharp": "^0.33.1"
   }
 }
