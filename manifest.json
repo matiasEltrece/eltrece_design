@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Eltrece Diseños",
+  "version": "1.0",
+  "description": "Genera imágenes compuestas y las envía a un webhook de Make.com desde un panel lateral.",
+  "permissions": [
+    "sidePanel" // Permiso necesario para usar la API Side Panel
+    // Otros permisos como "storage", "scripting" si fueran necesarios
+  ],
+  "host_permissions": [
+    "https://hook.us2.make.com/*" // Permiso para el webhook
+    // Añadir aquí otros dominios si se cargan imágenes desde ellos
+  ],
+  "background": {
+    // Service worker para configurar el comportamiento del panel
+    "service_worker": "background.js"
+  },
+  "action": {
+    // Ya no define un popup, pero sí el icono de la barra de herramientas
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "side_panel": {
+    // Define el archivo HTML para el panel lateral
+    "default_path": "eltrece.html"
+  }
+}
